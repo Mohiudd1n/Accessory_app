@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- res/drawable/background_image.xml -->
+        <item android:drawable="@drawable/gym_img" />
+</layer-list>

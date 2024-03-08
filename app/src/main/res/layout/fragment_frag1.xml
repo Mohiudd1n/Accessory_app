@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frag1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:id="@+id/ll1"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="180sp"
+            app:cornerRadius="20sp"
+            android:text="Car Accessory"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:id="@+id/caracc"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="180sp"
+            app:cornerRadius="20sp"
+            android:layout_weight="1"
+            android:id="@+id/gymacc"
+            android:layout_margin="5sp"
+            android:text="Gym Accessory"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180sp"
+        android:weightSum="2"
+        android:layout_below="@+id/ll1"
+        android:id="@+id/ll2"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="180sp"
+            android:layout_margin="5sp"
+            android:text="Sports Accessory"
+            android:id="@+id/sports_acc"
+            app:cornerRadius="20sp"
+            android:layout_weight="1"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="180sp"
+            app:cornerRadius="20sp"
+            android:id="@+id/college_acc"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="College Accessory"/>
+
+    </LinearLayout>
+    
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardBackgroundColor="@color/splash"
+            app:cardCornerRadius="20sp"
+            android:layout_margin="10sp"
+            android:layout_alignParentBottom="true"
+            android:elevation="20dp"
+            >
+            
+            <com.denzcoskun.imageslider.ImageSlider
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:iss_period="1000"
+                app:iss_delay="1000"
+                android:id="@+id/imageslider"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="20"
+                app:iss_title_background="@drawable/gradient"/>
+            
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#BCA37F</color>
+    <color name="Mainheading">#99B080</color>
+    <color name="Textcolor">#FF000000</color>
+    <color name="bk">#80FAF8ED</color>
+    <color name="temp2">#FFE4D6</color>
+    <color name="button">#FAF8ED</color>
+    <color name="RED">#FF0000</color>
+    <color name="temp">#DBE2EF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="splash">#FFB996</color>
+
+</resources>

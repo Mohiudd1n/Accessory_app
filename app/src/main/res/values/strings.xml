@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Blitzr Shopping App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="car_accessory_price">
+
+        <item>MRP: ₹700</item>
+        <item>MRP: ₹90</item>
+        <item>MRP: ₹249</item>
+        <item>MRP: ₹1499</item>
+        <item>MRP: ₹299</item>
+        <item>MRP: ₹179</item>
+        <item>MRP: ₹277</item>
+
+    </string-array>
+
+    <string-array name="car_accessory_old_price">
+
+        <item>₹800</item>
+        <item>₹110</item>
+        <item>₹299</item>
+        <item>₹2999</item>
+        <item>₹499</item>
+        <item>₹259</item>
+        <item>₹475</item>
+
+    </string-array>
+
+    <string-array name="car_accessory_rating">
+
+        <item>4.7 ★</item>
+        <item>4.1 ★</item>
+        <item>4 ★</item>
+        <item>4.5 ★</item>
+        <item>3.9 ★</item>
+        <item>3 ★</item>
+        <item>3.9 ★</item>
+
+    </string-array>
+
+    <string-array name="car_accessory_desc">
+
+        <item>Ambrane Car Mobile Holder with Adjustable Side Arm for Smartphones, Mobile Holder Mount
+            for Dashboard 360° Rotational, Strong Suction Cup, Compatible with 4 to 7-inch Devices (Grip Stand)</item>
+        <item>Godrej aer O Hanging Car Air Freshener Gel | Car Accessories | Cool Aqua (7.5G) | extra Long lasting freshness for 90 days , blueberry freshenss.</item>
+        <item>Autofy MAJIKO-3 Soft Microfiber Car Duster Car Brush for Car Cleaning Car Surface Wet and Dry Duster Multipurpose Home Duster Kitchen Cleaning (Extendable) Dusting Brush ‎(Assorted Colour) </item>
+        <item>FYA Handheld Vacuum Cleaner Cordless-LT103, Portable Car Vacuum Cleaner Rechargeable with HEPA Filter, Mini Hand Held Car Interior Vacuum Cleaning Accessories </item>
+        <item>SOFTSPUN Microfiber Cloth - 4 pcs - 40x40 cms - 340 GSM Grey- Thick Lint and Streak-Free Multipurpose Cloths - Automotive Microfibre Towels for Car Bike Cleaning Polishing Washing and Detailing.</item>
+        <item>Gozaqe Car Door Shock Absorber,12 PCS,Car Door Shock Absorber Pads Protector Gasket Guard Silicone Sticker Accessories,Universal PVC car Shock Absorber </item>
+        <item>3M Car Dashboard Dresser (250 ml) | Restores Gloss and Shine on Dashboard and Other Plastic Parts | Protection from UV Rays and Fading </item>
+
+    </string-array>
+
+    <string name="username">Hassaan Shaikh</string>
+    <string name="bio">18 year old game developer and 3D artist</string>
+    <string name="location">Mumbai</string>
+    <string name="dob">17/06/2005</string>
+    <string name="occupation">Game Dev</string>
+</resources>
