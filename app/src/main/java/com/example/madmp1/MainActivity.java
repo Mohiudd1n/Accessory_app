@@ -22,9 +22,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+        String email,pass;
         setContentView(binding.getRoot());
         t1= (TextView) findViewById(R.id.signup);
         dbManager = new DBManager(this);
+
+        boolean seestate = dbManager.seestate();
+        if(seestate==true){
+            Toast.makeText(getApplicationContext(),"State is active",Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(getApplicationContext(),"State is inactive",Toast.LENGTH_SHORT).show();
+        }
+
+        Boolean checkinglogin = dbManager.checklogin();
+        if (checkinglogin == false){
 
         binding.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     Boolean checklogin = dbManager.checkemailpassword(email,pass);
 
                     if(checklogin==true){
+                        dbManager.addstate(email);
                         Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainActivity.this,HomeActivity.class));
                         userEmail = email;
@@ -48,7 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             }
-        });
+        }); } else{
+            String email1 = binding.loginEmail.getText().toString().trim();
+            startActivity(new Intent(MainActivity.this,HomeActivity.class));
+            userEmail = email1;
+            finish();}
 
         binding.signup.setOnClickListener(new  View.OnClickListener() {
             @Override

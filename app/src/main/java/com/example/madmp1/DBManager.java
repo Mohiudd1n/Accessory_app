@@ -16,7 +16,7 @@ public class DBManager extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create Table signupdetails (name TEXT,email TEXT primary key,pass TEXT)");
+        db.execSQL("create Table signupdetails (name TEXT,email TEXT primary key,pass TEXT,state TEXT)");
 //        db.execSQL("drop Table cartdetails");
         db.execSQL("create Table cartdetails (useremail TEXT,description TEXT,quantity INTEGER,amount INTEGER)");
     }
@@ -28,6 +28,41 @@ public class DBManager extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void logout(){
+        String state_toadd = "inactive";
+        String state_toremove = "active";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("state",state_toadd);
+
+        // Updating row
+        db.update("signupdetails", values,  "state = ?", new String[]{state_toremove});
+    }
+
+    public boolean seestate(){
+        String state = "active";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from signupdetails where state = ?", new String[]{state});
+        if (cursor.getCount()>0){return true;}else{return false;}
+    }
+
+    public boolean checklogin(){
+        String state = "active";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from signupdetails where state = ?", new String[]{state});
+        if (cursor.getCount()>0){return true;}else{return false;}
+    }
+
+    public void addstate(String email){
+        String state = "active";
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("state",state);
+
+        // Updating row
+        db.update("signupdetails", values,  "email = ?", new String[]{email});
+    }
     public boolean addproduct(String email, String desc, int quantity, int amount){
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -45,12 +80,13 @@ public class DBManager extends SQLiteOpenHelper {
             return true;
         }
     }
-    public boolean inputdetails(String name,String email,String pass){
+    public boolean inputdetails(String name,String email,String pass,String state){
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("name",name);
         cv.put("email",email);
         cv.put("pass",pass);
+        cv.put("state",state);
 
         long result = DB.insert("signupdetails",null,cv);
 

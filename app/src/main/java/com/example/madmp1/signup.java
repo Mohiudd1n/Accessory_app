@@ -43,7 +43,7 @@ public class signup extends AppCompatActivity {
                         Boolean checkUserEmail = dbManager.checkemail(email);
 
                         if(checkUserEmail == false){
-                            Boolean insert = dbManager.inputdetails(name,email,pass);
+                            Boolean insert = dbManager.inputdetails(name,email,pass,"inactive");
 
                             if(insert==true){
                                 Toast.makeText(getApplicationContext(),"Signup was Successful!",Toast.LENGTH_SHORT).show();
