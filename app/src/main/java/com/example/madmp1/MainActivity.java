@@ -27,13 +27,6 @@ public class MainActivity extends AppCompatActivity {
         t1= (TextView) findViewById(R.id.signup);
         dbManager = new DBManager(this);
 
-        boolean seestate = dbManager.seestate();
-        if(seestate==true){
-            Toast.makeText(getApplicationContext(),"State is active",Toast.LENGTH_SHORT).show();
-        }else {
-            Toast.makeText(getApplicationContext(),"State is inactive",Toast.LENGTH_SHORT).show();
-        }
-
         Boolean checkinglogin = dbManager.checklogin();
         if (checkinglogin == false){
 

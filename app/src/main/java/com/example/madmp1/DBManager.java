@@ -40,13 +40,6 @@ public class DBManager extends SQLiteOpenHelper {
         db.update("signupdetails", values,  "state = ?", new String[]{state_toremove});
     }
 
-    public boolean seestate(){
-        String state = "active";
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("Select * from signupdetails where state = ?", new String[]{state});
-        if (cursor.getCount()>0){return true;}else{return false;}
-    }
-
     public boolean checklogin(){
         String state = "active";
         SQLiteDatabase db = this.getReadableDatabase();
