@@ -44,7 +44,7 @@ public class car_buyout extends AppCompatActivity {
         buyit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = MainActivity.userEmail;
+                String email = dbManager.get_email();
 //                Toast.makeText(getApplicationContext(), MainActivity.userEmail, Toast.LENGTH_LONG).show();
                 String inputString = tv_price.getText().toString();
                 String description = tv_desc.getText().toString();

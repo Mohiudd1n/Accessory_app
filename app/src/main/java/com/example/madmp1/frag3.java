@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class frag3 extends Fragment {
     ListView cartList,cartList2,cartList3;
 
     ArrayAdapter<String> adp ;
+    Button orderplaced;
     ArrayAdapter<Integer> adp2 ;
     String str;
     ArrayAdapter<Integer> adp3 ;
@@ -40,6 +42,7 @@ public class frag3 extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_frag3, container, false);
+        orderplaced = view.findViewById(R.id.orders);
         cartList = view.findViewById(R.id.list1);
         cartList2 = view.findViewById(R.id.list2);
         cartList3 = view.findViewById(R.id.list3);
@@ -69,11 +72,25 @@ public class frag3 extends Fragment {
             cartList.setAdapter(adp);
             cartList2.setAdapter(adp2);
             cartList3.setAdapter(adp3);
+            orderplaced.setEnabled(true);
 
+            orderplaced.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String email = db.get_email();
+                    if (email != null){
+                        db.insert_order(email);
+                        db.clear_cart(email);
+                    }else{
+
+                    }
+                }
+            });
         }
         else
         {
             Toast.makeText(getContext(),"Empty", Toast.LENGTH_SHORT).show();
+            orderplaced.setEnabled(false);
         }
 
         cartList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

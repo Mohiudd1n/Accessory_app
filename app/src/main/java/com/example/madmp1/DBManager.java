@@ -19,15 +19,42 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL("create Table signupdetails (name TEXT,email TEXT primary key,pass TEXT,state TEXT)");
 //        db.execSQL("drop Table cartdetails");
         db.execSQL("create Table cartdetails (useremail TEXT,description TEXT,quantity INTEGER,amount INTEGER)");
+        db.execSQL("create Table orderdetails (useremail TEXT,description TEXT,quantity INTEGER,amount INTEGER)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop Table if exists signupdetails");
         db.execSQL("drop Table if exists cartdetails");
+        db.execSQL("drop Table if exists orderdetails");
         onCreate(db);
     }
 
+    public String get_email(){
+        String state = "active";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from signupdetails where state = ?", new String[]{state});
+        if(cursor.getCount()>0){
+            cursor.moveToNext();
+            String email = cursor.getString(0);
+            return email;
+        }else{
+            return null;
+        }
+    }
+
+    public void insert_order(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String sqlQuery = "INSERT INTO orderdetails (useremail, description, quantity, amount) " +
+                "SELECT useremail, description, quantity, amount " +
+                "FROM cartdetails where useremail = ?";
+        db.execSQL(sqlQuery,new String[]{email});
+    }
+    public void clear_cart(String email){
+        String deleteQuery = "DELETE FROM cartdetails WHERE useremail = ?";
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL(deleteQuery,new String[]{email});
+    }
     public void logout(){
         String state_toadd = "inactive";
         String state_toremove = "active";
@@ -38,6 +65,7 @@ public class DBManager extends SQLiteOpenHelper {
 
         // Updating row
         db.update("signupdetails", values,  "state = ?", new String[]{state_toremove});
+        db.close();
     }
 
     public boolean checklogin(){

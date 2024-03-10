@@ -23,24 +23,32 @@
         android:id="@+id/linear_layout">
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/list1"
             android:layout_weight="1"
             android:dividerHeight="10dp"
             />
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/list2"
             android:layout_weight="2"
             android:dividerHeight="10dp"
             />
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/list3"
             android:dividerHeight="10dp"
             android:layout_weight="2"
             />
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place Order"
+        android:id="@+id/orders"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
 </RelativeLayout>

@@ -10,7 +10,6 @@ import android.widget.FrameLayout;
 import com.google.android.material.tabs.TabLayout;
 
 public class HomeActivity extends AppCompatActivity {
-
     FrameLayout frameLayout;
     TabLayout tabLayout;
     @Override
