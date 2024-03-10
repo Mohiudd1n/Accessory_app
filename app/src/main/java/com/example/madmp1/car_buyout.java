@@ -14,12 +14,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class car_buyout extends AppCompatActivity {
     int _quantity;
+    EditText q;
     DBManager dbManager = new DBManager(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_buyout);
-
+        q = findViewById(R.id.quantity_amnt);
         String desc = getIntent().getStringExtra("desc");
         String rate = getIntent().getStringExtra("rate");
         String oprice = getIntent().getStringExtra("oprice");
@@ -52,16 +53,15 @@ public class car_buyout extends AppCompatActivity {
                 String value = inputString.replaceAll("[^0-9]", "");
                 int price_value = Integer.parseInt(value);
 
-
                 if(!quantity.getText().toString().equals("")) {
                     _quantity = Integer.parseInt(quantity.getText().toString());
                     int quantity_price = _quantity*price_value;
                     boolean a = dbManager.addproduct(email,description,_quantity,quantity_price);
                     if(a) {
-                        Toast.makeText(getApplicationContext(), "Something happened", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Added To Cart", Toast.LENGTH_LONG).show();
+                        q.setText("");
                     }
                 }
-
             }
         });
     }

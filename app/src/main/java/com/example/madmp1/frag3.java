@@ -47,7 +47,8 @@ public class frag3 extends Fragment {
         cartList2 = view.findViewById(R.id.list2);
         cartList3 = view.findViewById(R.id.list3);
         DBManager db = new DBManager(getContext());
-        Cursor cursor = db.fetch_cart(MainActivity.userEmail);
+        String email = db.get_email();
+        Cursor cursor = db.fetch_cart(email);
         adp = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,desc);
 
         if(cursor.getCount()>0){

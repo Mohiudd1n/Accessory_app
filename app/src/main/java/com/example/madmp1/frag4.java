@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class frag4 extends Fragment {
-    Button logout;
+    Button logout,showorders;
     Fragment currentFragment;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,8 +23,15 @@ public class frag4 extends Fragment {
         View v =  inflater.inflate(R.layout.fragment_frag4, container, false);
         DBManager dbManager = new DBManager(getContext());
 
+        showorders = v.findViewById(R.id.my_orders_button);
         logout = v.findViewById(R.id.logout);
 
+        showorders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

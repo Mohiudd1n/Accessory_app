@@ -40,7 +40,7 @@ public class signup extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Please Enter All Fields!",Toast.LENGTH_SHORT).show();
                 } else if (!check_format_email(email)) {
                     Toast.makeText(getApplicationContext(),"Invalid Email Format!", Toast.LENGTH_SHORT).show();
-                } else if (pass.length()<8) {
+                } else if ((pass.length())<8) {
                     Toast.makeText(getApplicationContext(),"Password Length Too Short!", Toast.LENGTH_SHORT).show();
                 } else{
                     if(pass.equals(confirm)){

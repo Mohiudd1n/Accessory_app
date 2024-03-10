@@ -12,5 +12,6 @@
     <color name="temp">#DBE2EF</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="splash">#FFB996</color>
+    <color name="tabs">#114232</color>
 
 </resources>

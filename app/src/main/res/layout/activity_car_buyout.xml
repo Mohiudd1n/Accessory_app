@@ -79,7 +79,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Proceed to Checkout"
+        android:text="Add to Cart"
         android:layout_below="@+id/quantity"
         android:layout_centerHorizontal="true"
         android:id="@+id/buyout"

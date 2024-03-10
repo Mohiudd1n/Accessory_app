@@ -105,6 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
+        android:id="@+id/linear_layout2"
         android:paddingHorizontal="10dp"
         android:layout_marginTop="20dp">
 
@@ -125,8 +126,9 @@
             android:text="Buy Again"
             android:layout_marginHorizontal="5dp"
             android:textSize="20sp"/>
+        </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
