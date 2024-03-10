@@ -151,4 +151,10 @@ public class DBManager extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Cursor fetch_orders(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from orderdetails where useremail = ?", new String[]{email});
+//        db.close();
+        return cursor;
+    }
 }
