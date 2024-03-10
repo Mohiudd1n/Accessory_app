@@ -2,6 +2,7 @@ package com.example.madmp1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if(email.equals("")||pass.equals("")){
                     Toast.makeText(getApplicationContext(),"Please Enter all Fields!",Toast.LENGTH_SHORT).show();
+                } else if (!check_format_email(email)) {
+                    Toast.makeText(getApplicationContext(),"Invalid Email Format", Toast.LENGTH_SHORT).show();
                 } else{
                     Boolean checklogin = dbManager.checkemailpassword(email,pass);
 
@@ -66,5 +69,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    public boolean check_format_email(String email){
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
 }

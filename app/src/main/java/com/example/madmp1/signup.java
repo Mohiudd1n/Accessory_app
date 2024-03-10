@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -36,9 +37,12 @@ public class signup extends AppCompatActivity {
                 String confirm = binding.signupConfirm.getText().toString().trim();
 
                 if(email.equals("") || name.equals("") || pass.equals("") || confirm.equals("")){
-                    Toast.makeText(getApplicationContext(),"Please Enter All Fields",Toast.LENGTH_SHORT).show();
-                }
-                else{
+                    Toast.makeText(getApplicationContext(),"Please Enter All Fields!",Toast.LENGTH_SHORT).show();
+                } else if (!check_format_email(email)) {
+                    Toast.makeText(getApplicationContext(),"Invalid Email Format!", Toast.LENGTH_SHORT).show();
+                } else if (pass.length()<8) {
+                    Toast.makeText(getApplicationContext(),"Password Length Too Short!", Toast.LENGTH_SHORT).show();
+                } else{
                     if(pass.equals(confirm)){
                         Boolean checkUserEmail = dbManager.checkemail(email);
 
@@ -80,5 +84,8 @@ public class signup extends AppCompatActivity {
 //            }
 //        });
 
+    }
+    public boolean check_format_email(String email){
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
     }
