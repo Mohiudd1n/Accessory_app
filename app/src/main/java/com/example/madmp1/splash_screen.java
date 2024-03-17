@@ -30,13 +30,13 @@ public class splash_screen extends AppCompatActivity {
     private void startSplashScreenWithAnimation() {
         splashImage.setVisibility(View.VISIBLE);
         ObjectAnimator rotationAnimator = ObjectAnimator.ofFloat(splashImage, "rotation", 0f, 360f);
-        rotationAnimator.setDuration(600); // Set the rotation animation duration in milliseconds
+        rotationAnimator.setDuration(600);
 
         // Scale animation using ObjectAnimator
-        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(splashImage, "scaleX", 0.5f, 1f);
-        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat(splashImage, "scaleY", 0.5f, 1f);
-        scaleXAnimator.setDuration(600); // Set the scale animation duration in milliseconds
-        scaleYAnimator.setDuration(600); // Set the scale animation duration in milliseconds
+        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(splashImage, "scaleX", 0.4f, 1.3f);
+        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat(splashImage, "scaleY", 0.4f, 1.3f);
+        scaleXAnimator.setDuration(900);
+        scaleYAnimator.setDuration(900);
 
         // Combine rotation and scale animations into an AnimatorSet
         AnimatorSet animatorSet = new AnimatorSet();
