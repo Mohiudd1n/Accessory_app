@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     tools:context=".car_buyout">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="400sp"
+        android:background="@drawable/border_drawable"
         android:layout_marginBottom="10sp"
         android:id="@+id/imageView"/>
 
@@ -18,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginBottom="10sp"
         android:id="@+id/desc"/>
 
@@ -77,12 +80,14 @@
         android:layout_alignBaseline="@+id/quantity"
         />
     <Button
+        android:background="@color/bk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add to Cart"
-        android:layout_below="@+id/quantity"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
         android:id="@+id/buyout"
+        android:layout_marginBottom="20dp"
         />
 
 </RelativeLayout>

@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         app:cardCornerRadius="15sp"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:id="@+id/cardlayout">
 
         <RelativeLayout
@@ -16,12 +17,12 @@
             android:id="@+id/relativelayout"
             >
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2sp"
-                android:layout_below="@+id/imageView"
-                android:background="@color/black"
-                />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2sp"-->
+<!--                android:layout_below="@+id/imageView"-->
+<!--                android:background="@color/black"-->
+<!--                />-->
 
             <ImageView
                 android:id="@+id/imageView"

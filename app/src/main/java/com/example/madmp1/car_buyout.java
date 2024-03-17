@@ -45,6 +45,11 @@ public class car_buyout extends AppCompatActivity {
         buyit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(quantity.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Please Enter Valid Quantity!", Toast.LENGTH_LONG).show();
+                }else{
+
                 String email = dbManager.get_email();
 //                Toast.makeText(getApplicationContext(), MainActivity.userEmail, Toast.LENGTH_LONG).show();
                 String inputString = tv_price.getText().toString();
@@ -61,7 +66,7 @@ public class car_buyout extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Added To Cart", Toast.LENGTH_LONG).show();
                         q.setText("");
                     }
-                }
+                }}
             }
         });
     }
