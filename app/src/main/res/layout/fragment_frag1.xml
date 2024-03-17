@@ -45,11 +45,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt1"
-                        android:text="One Stop Destination"
+                        android:text="Hi, "
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/username1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt1"
+                        android:layout_toRightOf="@+id/txt2"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         android:textStyle="bold">
-
                     </TextView>
 
                     <ImageView
@@ -139,7 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Car Accessory"
+                        android:text="Car Acc"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
                 </LinearLayout>
@@ -162,7 +171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Gym Accessory"
+                        android:text="Gym Acc"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
                 </LinearLayout>
@@ -184,7 +193,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Sports Accessory"
+                        android:text="Sports Acc"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
                 </LinearLayout>
@@ -206,33 +215,35 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="College Accessory"
+                        android:text="College Acc"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2"
-                    android:orientation="vertical">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:orientation="vertical">-->
 
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="54dp"
-                        android:layout_weight="1"
-                        android:src="@drawable/cat5" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageView2"-->
+<!--                        android:layout_width="54dp"-->
+<!--                        android:layout_height="54dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:src="@drawable/cat5" />-->
 
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="View All "
-                        android:textAlignment="center"
-                        android:textColor="@color/black" />
-                </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:id="@+id/textView6"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:text="View All "-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="@color/black" />-->
+<!--                </LinearLayout>-->
             </LinearLayout>
         </LinearLayout>
 

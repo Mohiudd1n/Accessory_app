@@ -42,6 +42,8 @@ public class signup extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Invalid Email Format!", Toast.LENGTH_SHORT).show();
                 } else if ((pass.length())<8) {
                     Toast.makeText(getApplicationContext(),"Password Length Too Short!", Toast.LENGTH_SHORT).show();
+                } else if (!name.matches("[a-zA-Z ]+")) {
+                    Toast.makeText(getApplicationContext(),"Invalid Name!", Toast.LENGTH_SHORT).show();
                 } else{
                     if(pass.equals(confirm)){
                         Boolean checkUserEmail = dbManager.checkemail(email);

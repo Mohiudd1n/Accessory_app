@@ -17,7 +17,6 @@ public class DBManager extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create Table signupdetails (name TEXT,email TEXT primary key,pass TEXT,state TEXT)");
-//        db.execSQL("drop Table cartdetails");
         db.execSQL("create Table cartdetails (useremail TEXT,description TEXT,quantity INTEGER,amount INTEGER)");
         db.execSQL("create Table orderdetails (useremail TEXT,description TEXT,quantity INTEGER,amount INTEGER)");
     }
@@ -38,6 +37,18 @@ public class DBManager extends SQLiteOpenHelper {
             cursor.moveToNext();
             String email = cursor.getString(0);
             return email;
+        }else{
+            return null;
+        }
+    }
+
+    public String get_name(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select name from signupdetails where email = ?", new String[]{email});
+        if(cursor.getCount()>0){
+            cursor.moveToNext();
+            String email1 = cursor.getString(0);
+            return email1;
         }else{
             return null;
         }

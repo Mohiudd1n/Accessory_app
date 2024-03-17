@@ -34,13 +34,16 @@ public class HomeActivity extends AppCompatActivity {
                     frag = new frag1();
                     break;
                 case 1:
-                    frag = new frag2();
+                    frag = new frag3();
+//                    frag = new frag2();
                     break;
                 case 2:
-                    frag = new frag3();
+                    frag = new frag4();
+//                    frag = new frag3();
                     break;
                 case 3:
-                    frag = new frag4();
+                    frag = new frag2();
+//                    frag = new frag4();
                     break;
             }
 

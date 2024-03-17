@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -19,8 +20,9 @@ import java.util.ArrayList;
 public class frag1 extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
+    DBManager dbManager;
     ImageView caracc,gymacc,clgacc,sprtacc;
+    TextView usersname;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,7 +34,14 @@ public class frag1 extends Fragment {
         caracc = view.findViewById(R.id.caracc);
         gymacc = view.findViewById(R.id.gymacc);
         clgacc = view.findViewById(R.id.college_acc);
+        usersname = view.findViewById(R.id.username1);
         sprtacc = view.findViewById(R.id.sports_acc);
+        dbManager= new DBManager(getContext());
+
+        String email = dbManager.get_email();
+        if(email!=null) {
+            usersname.setText(email);
+        }
 
         ImageSlider imageSlider = view.findViewById(R.id.imageslider);
         ArrayList<SlideModel> slideModels = new ArrayList<>();
