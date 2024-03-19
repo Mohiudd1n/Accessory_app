@@ -11,7 +11,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class HomeActivity extends AppCompatActivity {
     FrameLayout frameLayout;
-    TabLayout tabLayout;
+    public TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

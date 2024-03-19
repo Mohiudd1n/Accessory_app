@@ -35,7 +35,7 @@ public class DBManager extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("Select * from signupdetails where state = ?", new String[]{state});
         if(cursor.getCount()>0){
             cursor.moveToNext();
-            String email = cursor.getString(0);
+            String email = cursor.getString(1);
             return email;
         }else{
             return null;

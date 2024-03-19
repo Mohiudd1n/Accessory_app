@@ -3,7 +3,7 @@
     <style name="Base.Theme.Madmp1" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/tabs</item>
-        <item name="android:statusBarColor">@color/temp2</item>
+        <item name="android:statusBarColor">@color/splash</item>
     </style>
     <style name="Theme.Madmp1" parent="Base.Theme.Madmp1" />
 </resources>

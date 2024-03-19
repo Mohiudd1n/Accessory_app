@@ -2,6 +2,6 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Madmp1" parent="Theme.Material3.Light.NoActionBar">
 <!--        <item name="colorPrimary">@color/temp2</item>-->
-        <item name="android:statusBarColor">@color/temp2</item>
+        <item name="android:statusBarColor">@color/splash</item>
     </style>
 </resources>

@@ -32,6 +32,8 @@ public class frag3 extends Fragment {
     ArrayList<Integer> quantity = new ArrayList<>();
     ArrayList<Integer> amount = new ArrayList<>();
 
+    View view ;
+    DBManager db;
     public frag3() {
         // Required empty public constructor
     }
@@ -41,20 +43,24 @@ public class frag3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_frag3, container, false);
+        view = inflater.inflate(R.layout.fragment_frag3, container, false);
+        initialize();
+        return view;
+    }
+
+    private void initialize(){
         orderplaced = view.findViewById(R.id.orders);
         cartList = view.findViewById(R.id.list1);
         cartList2 = view.findViewById(R.id.list2);
         cartList3 = view.findViewById(R.id.list3);
-        DBManager db = new DBManager(getContext());
+        db = new DBManager(getContext());
         String email = db.get_email();
         Cursor cursor = db.fetch_cart(email);
-        adp = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,desc);
 
         if(cursor.getCount()>0){
             while(cursor.moveToNext()){
-            int index = cursor.getColumnIndex("description");
-            desc.add(cursor.getString(index));
+                int index = cursor.getColumnIndex("description");
+                desc.add(cursor.getString(index));
 
                 int index2 = cursor.getColumnIndex("quantity");
                 quantity.add(cursor.getInt(index2));
@@ -62,7 +68,7 @@ public class frag3 extends Fragment {
                 int index3 = cursor.getColumnIndex("amount");
                 amount.add(cursor.getInt(index3));
 
-         }
+            }
             for(int i=0; i < quantity.toArray().length; i++) {
                 str = desc.get(i);
                 short_desc.add(str.substring(0,20) + "...");
@@ -82,6 +88,10 @@ public class frag3 extends Fragment {
                     if (email != null){
                         db.insert_order(email);
                         db.clear_cart(email);
+                        initialize();
+                        adp.clear();
+                        adp2.clear();
+                        adp3.clear();
                     }else{
 
                     }
@@ -100,7 +110,9 @@ public class frag3 extends Fragment {
 
             }
         });
+
 //        db.close();
-        return view;
+
     }
+
 }

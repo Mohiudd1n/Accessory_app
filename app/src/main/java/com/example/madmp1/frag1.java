@@ -5,15 +5,22 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.tabs.TabLayout;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 
@@ -21,7 +28,8 @@ public class frag1 extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     DBManager dbManager;
-    ImageView caracc,gymacc,clgacc,sprtacc;
+
+    ImageView caracc,gymacc,clgacc,sprtacc,img1;
     TextView usersname;
 
     @Override
@@ -35,12 +43,15 @@ public class frag1 extends Fragment {
         gymacc = view.findViewById(R.id.gymacc);
         clgacc = view.findViewById(R.id.college_acc);
         usersname = view.findViewById(R.id.username1);
+        img1 = view.findViewById(R.id.img1);
         sprtacc = view.findViewById(R.id.sports_acc);
         dbManager= new DBManager(getContext());
 
         String email = dbManager.get_email();
         if(email!=null) {
-            usersname.setText(email);
+            String name = dbManager.get_name(email);
+            name = StringUtils.capitalize(name);
+            usersname.setText(name);
         }
 
         ImageSlider imageSlider = view.findViewById(R.id.imageslider);
@@ -68,6 +79,16 @@ public class frag1 extends Fragment {
             public void onClick(View v) {
                 // Handle button click
                 startActivity(new Intent(v.getContext(),gym_accessories.class));
+            }
+        });
+
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment frag = new frag4();
+                getFragmentManager().beginTransaction().replace(R.id.framelayout,frag)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit();
             }
         });
 
