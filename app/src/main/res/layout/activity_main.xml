@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relativelayout"
     android:background="@drawable/bg"
     tools:context=".MainActivity">
 
@@ -78,7 +79,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/login_button"
-            style="?attr/materialButtonOutlinedStyle"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_marginStart="20sp"
             android:layout_marginEnd="20sp"
@@ -86,10 +87,13 @@
             android:layout_height="wrap_content"
             android:padding="4sp"
             android:layout_gravity="center"
+            app:strokeWidth="0.5dp"
+            app:strokeColor="@color/black"
             android:layout_marginTop="30sp"
             android:layout_weight="0.2"
+            android:textColor="@color/grey_font"
             android:text="Submit"
-            android:textColor="@color/Textcolor"
+            app:shapeAppearance="@style/Rounded"
             android:textSize="16sp" />
 
         <TextView
