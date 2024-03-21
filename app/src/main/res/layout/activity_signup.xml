@@ -54,73 +54,104 @@
             android:layout_weight="0.1"
             android:background="@color/black" />
 
-        <EditText
-            android:id="@+id/signup_name"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/textboxlayout"
-            android:hint="Name:"
-            android:paddingLeft="10dp"
-            android:textColor="@color/Textcolor"
-            android:textColorHint="@color/Textcolor" />
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            app:endIconTint="@color/temp2"
+            android:layout_marginHorizontal="20dp"
+            app:shapeAppearance="@style/Rounded"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="15dp"
+            app:endIconMode="clear_text">
 
-        <EditText
-            android:id="@+id/signup_email"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/signup_name"
+                android:imeOptions="actionNone"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/textboxlayout"
-            android:hint="Email:"
-            android:paddingLeft="10dp"
-            android:textColor="@color/Textcolor"
-            android:textColorHint="@color/Textcolor" />
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            app:endIconTint="@color/temp2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            app:shapeAppearance="@style/Rounded"
+            android:layout_marginBottom="0dp"
+            app:endIconMode="clear_text">
 
-        <EditText
-            android:id="@+id/signup_pass"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/signup_email"
+                android:imeOptions="actionNone"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter password"
+            app:endIconTint="@color/splash"
+            android:layout_marginHorizontal="20dp"
+            app:shapeAppearance="@style/Rounded"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            app:endIconMode="password_toggle">
 
-            android:background="@drawable/textboxlayout"
-            android:hint="Password:"
-            android:paddingLeft="10dp"
-            android:textColor="@color/Textcolor"
-            android:textColorHint="@color/Textcolor" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/signup_pass"
+                android:imeOptions="actionNone"
+                android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/signup_confirm"
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/textboxlayout"
-            android:hint="Re-Type Password:"
-            android:paddingLeft="10dp"
-            android:textColor="@color/Textcolor"
-            android:textColorHint="@color/Textcolor" />
+            android:layout_height="wrap_content"
+            android:hint="Enter password"
+            android:layout_marginTop="15dp"
+            app:endIconTint="@color/splash"
+            android:layout_marginHorizontal="20dp"
+            app:shapeAppearance="@style/Rounded"
+            android:layout_marginBottom="0dp"
+            app:endIconMode="password_toggle">
 
-        <Button
-            android:id="@+id/submitbtn"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/signup_confirm"
+                android:imeOptions="actionNone"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submitbtn"
+            app:strokeColor="@color/black"
+            app:strokeWidth="0.5dp"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="20sp"
-            android:background="@drawable/textboxlayout"
             android:paddingLeft="30sp"
             android:paddingRight="30sp"
-            android:text="Submit"
-            android:textColor="@color/Textcolor"
-            android:textSize="20sp" />
-
+            android:backgroundTint="@color/temp2"
+            app:shapeAppearance="@style/Rounded"
+            />
     </LinearLayout>
 </RelativeLayout>

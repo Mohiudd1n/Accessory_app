@@ -139,7 +139,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
-                        android:src="@drawable/item_6"
+                        android:src="@drawable/cars"
                         android:id="@+id/caracc"
                         />
 
@@ -163,7 +163,7 @@
                         android:id="@+id/gymacc"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
-                        android:src="@drawable/item_22"
+                        android:src="@drawable/gyms"
                         />
 
                     <TextView
@@ -186,7 +186,7 @@
                         android:id="@+id/sports_acc"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
-                        android:src="@drawable/item_11" />
+                        android:src="@drawable/item_22" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -208,7 +208,7 @@
                         android:id="@+id/college_acc"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
-                        android:src="@drawable/item_44" />
+                        android:src="@drawable/clgs" />
 
                     <TextView
                         android:id="@+id/textView10"
