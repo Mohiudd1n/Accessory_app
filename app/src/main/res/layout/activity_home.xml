@@ -14,7 +14,7 @@
         android:layout_alignParentBottom="true"
         android:id="@+id/tablayout"
         app:tabSelectedTextColor="@color/RED"
-        app:tabIndicatorColor="@color/Textcolor"
+        app:tabIndicatorColor="@color/splash"
         >
 
         <com.google.android.material.tabs.TabItem

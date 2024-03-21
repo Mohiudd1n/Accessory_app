@@ -1,6 +1,7 @@
 package com.example.madmp1;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class car_buyout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_buyout);
+
         q = findViewById(R.id.quantity_amnt);
         String desc = getIntent().getStringExtra("desc");
         String rate = getIntent().getStringExtra("rate");
@@ -42,12 +44,16 @@ public class car_buyout extends AppCompatActivity {
         tv_price.setText(price);
         imageView.setImageResource(image);
 
+        int dr_before = R.drawable.baseline_add_24;
+        int dr_after = R.drawable.baseline_done_24;
+
         buyit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if(quantity.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(), "Please Enter Valid Quantity!", Toast.LENGTH_LONG).show();
+                    quantity.setError("Please enter quantity");
+                    //                    Toast.makeText(getApplicationContext(), "Please Enter Valid Quantity!", Toast.LENGTH_LONG).show();
                 }else{
 
                 String email = dbManager.get_email();
@@ -63,7 +69,28 @@ public class car_buyout extends AppCompatActivity {
                     int quantity_price = _quantity*price_value;
                     boolean a = dbManager.addproduct(email,description,_quantity,quantity_price);
                     if(a) {
-                        Toast.makeText(getApplicationContext(), "Added To Cart", Toast.LENGTH_LONG).show();
+                        buyit.animate()
+                                .scaleX(1.05f)
+                                .scaleY(1.05f)
+                                .setDuration(200) // Adjust animation duration as needed
+                                .withEndAction(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        buyit.setText("Added To Cart");
+                                        buyit.setEnabled(false); // Disable the button temporarily
+
+                                        new Handler().postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                buyit.setText("Add To Cart");
+                                                buyit.setEnabled(true);
+                                                buyit.animate().scaleX(1f).scaleY(1f).setDuration(300); // Reset animation
+                                            }
+                                        }, 2000); // Delay for 2 seconds
+                                    }
+                                })
+                                .start();
+//                        Toast.makeText(getApplicationContext(), "Added To Cart", Toast.LENGTH_LONG).show();
                         q.setText("");
                     }
                 }}
