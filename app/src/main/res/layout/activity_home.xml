@@ -5,12 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/home"
-    android:background="@color/temp"
+    android:background="@color/white"
     tools:context=".HomeActivity">
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorAnimationDuration="300"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="3dp"
+        style="@style/Widget.App.TabLayout"
+        app:tabRippleColor="@color/splash"
         android:layout_alignParentBottom="true"
         android:id="@+id/tablayout"
         app:tabSelectedTextColor="@color/RED"
