@@ -29,6 +29,17 @@ public class DBManager extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void update_quantity(String desc, String email,int quantity, int amount){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("quantity",quantity);
+        values.put("amount",amount);
+
+        // Updating row
+        db.update("cartdetails", values,  "useremail = ? and description = ?", new String[]{email,desc});
+        db.close();
+    }
+
     public String get_email(){
         String state = "active";
         SQLiteDatabase db = this.getReadableDatabase();

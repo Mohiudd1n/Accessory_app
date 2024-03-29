@@ -72,12 +72,12 @@ public class car_buyout extends AppCompatActivity {
                         buyit.animate()
                                 .scaleX(1.05f)
                                 .scaleY(1.05f)
-                                .setDuration(200) // Adjust animation duration as needed
+                                .setDuration(200) // duration
                                 .withEndAction(new Runnable() {
                                     @Override
                                     public void run() {
                                         buyit.setText("Added To Cart");
-                                        buyit.setEnabled(false); // Disable the button temporarily
+                                        buyit.setEnabled(false);
 
                                         new Handler().postDelayed(new Runnable() {
                                             @Override
@@ -86,7 +86,7 @@ public class car_buyout extends AppCompatActivity {
                                                 buyit.setEnabled(true);
                                                 buyit.animate().scaleX(1f).scaleY(1f).setDuration(300); // Reset animation
                                             }
-                                        }, 2000); // Delay for 2 seconds
+                                        }, 2000);
                                     }
                                 })
                                 .start();

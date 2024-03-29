@@ -15,6 +15,7 @@
     <color name="splash">#fe7ab3</color>
     <color name="blue_Dark">#34495E</color>
     <color name="blue_Light">#6B7DF0</color>
+    <color name="statusBarColor">#FF000000</color>
 
 
 

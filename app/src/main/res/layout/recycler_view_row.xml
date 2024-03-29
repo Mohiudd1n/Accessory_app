@@ -30,6 +30,7 @@
                 android:layout_height="140sp"
                 app:srcCompat="@drawable/car_holder"
                 android:paddingTop="20sp"
+                android:layout_marginRight="7dp"
                 android:paddingBottom="20sp"
                 />
 

@@ -109,9 +109,6 @@ public class frag1 extends Fragment {
         });
 
 
-
-        // Other setup tasks can go here
-
         return view;
     }
 

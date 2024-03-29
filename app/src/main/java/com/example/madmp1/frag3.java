@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.ListFragment;
 
 import android.view.LayoutInflater;
@@ -14,8 +15,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -34,9 +37,10 @@ public class frag3 extends Fragment {
     ArrayList<String> short_desc = new ArrayList<>();
     ArrayList<Integer> quantity = new ArrayList<>();
     ArrayList<Integer> amount = new ArrayList<>();
+    EditText quan;
 
     View view ;
-    DBManager db;
+    public DBManager db;
     public frag3() {
         // Required empty public constructor
     }
@@ -50,15 +54,91 @@ public class frag3 extends Fragment {
         initialize();
         return view;
     }
+    private void dialog_show(int pos){
+        quan = view.findViewById(R.id.nquantity);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Edit Quantity or Remove Item");
+        builder.setMessage("Do you want to edit the quantity or remove this item from the cart?");
 
+        builder.setPositiveButton("Edit Quantity", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.CustomAlertDialogTheme);
+
+                // Inflate custom layout for dialog
+                LayoutInflater inflater = getLayoutInflater();
+                View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+                builder.setView(dialogView);
+
+                ImageView dialogIcon = dialogView.findViewById(R.id.dialogIcon);
+                TextView dialogTitle = dialogView.findViewById(R.id.dialogTitle);
+                EditText quan = dialogView.findViewById(R.id.nquantity);
+
+//                dialogIcon.setImageResource(R.drawable.ic_alert);
+                dialogTitle.setText("Add New Quantity");
+
+                builder.setPositiveButton("Edit Quantity", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        String quant = quan.getText().toString().trim();
+                        int n = Integer.parseInt(quant);
+                        int price = amount.get(pos)/quantity.get(pos);
+                        int amo = price*n;
+                        String em = db.get_email();
+                        String d = desc.get(pos);
+                        db.update_quantity(d,em, n,amo);
+                        adp.clear();
+                        adp2.clear();
+                        adp3.clear();
+                        initialize();
+                    }
+                });
+
+                builder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // Do nothing, simply close the dialog
+                    }
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        builder.setNegativeButton("Remove Item", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Handle remove item action
+                // You can add your logic here
+            }
+        });
+
+        builder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Do nothing, simply close the dialog
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
     private void initialize(){
         orderplaced = view.findViewById(R.id.orders);
         cartList = view.findViewById(R.id.list1);
         cartList2 = view.findViewById(R.id.list2);
-        cartList3 = view.findViewById(R.id.list3);
         db = new DBManager(getContext());
+        cartList3 = view.findViewById(R.id.list3);
         String email = db.get_email();
         Cursor cursor = db.fetch_cart(email);
+
+        cartList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                dialog_show(position);
+            }
+        });
 
         if(cursor.getCount()>0){
             while(cursor.moveToNext()){

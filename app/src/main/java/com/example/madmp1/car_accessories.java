@@ -1,6 +1,7 @@
 package com.example.madmp1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,12 +18,13 @@ public class car_accessories extends AppCompatActivity implements RecyclerViewCl
 
     ArrayList<CarAccModels> carAccModels = new ArrayList<>();
     int[] car_acc_images = {R.drawable.car_holder,R.drawable.item_2,R.drawable.item_3,R.drawable.item_4,R.drawable.item_5,
-    R.drawable.item_6,R.drawable.item_7
+    R.drawable.item_6,R.drawable.item_7,R.drawable.car_item12,R.drawable.car_item9,R.drawable.car_item10
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.statusBarColor));
         setContentView(R.layout.activity_car_accessories);
 
         RecyclerView recyclerView = findViewById(R.id.myrecyclerview);
@@ -35,17 +37,16 @@ public class car_accessories extends AppCompatActivity implements RecyclerViewCl
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        ImageView btn = (ImageView) findViewById(R.id.btn1);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+//        ImageView btn = (ImageView) findViewById(R.id.btn1);
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                finish();
+//            }
+//        });
 
     }
-
     private void setCarAccModels(){
         String[] car_desc = getResources().getStringArray(R.array.car_accessory_desc);
         String[] car_price = getResources().getStringArray(R.array.car_accessory_price);

@@ -39,6 +39,7 @@
             android:exported="false" />
         <activity
             android:name=".car_accessories"
+            android:fitsSystemWindows="true"
             android:exported="false" />
         <activity
             android:name=".splash_screen"
