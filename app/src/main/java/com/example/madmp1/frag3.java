@@ -1,5 +1,7 @@
 package com.example.madmp1;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
 
@@ -12,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -100,19 +103,9 @@ public class frag3 extends Fragment {
         }
         else
         {
-            Toast.makeText(getContext(),"Empty", Toast.LENGTH_SHORT).show();
             orderplaced.setEnabled(false);
         }
-
-        cartList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-            }
-        });
-
 //        db.close();
 
     }
-
 }

@@ -1,5 +1,7 @@
 package com.example.madmp1;
 
+import static android.graphics.Color.RED;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.AnimatorSet;
@@ -16,16 +18,23 @@ import android.widget.ImageView;
 public class splash_screen extends AppCompatActivity {
     private ImageView splashImage;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        
-        setContentView(R.layout.activity_splash_screen);
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
 
-        splashImage = findViewById(R.id.splash);
-        startSplashScreenWithAnimation();
-    }
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        );
+            setContentView(R.layout.activity_splash_screen);
+
+            splashImage = findViewById(R.id.splash);
+            startSplashScreenWithAnimation();
+        }
 
     private void startSplashScreenWithAnimation() {
         splashImage.setVisibility(View.VISIBLE);

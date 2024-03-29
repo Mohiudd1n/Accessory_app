@@ -9,8 +9,11 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
     </style>
+    <style name="AppTheme.NoFullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
+    </style>
     <style name="Theme.App" parent="Theme.MaterialComponents">
-        ...
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="colorPrimary">@color/splash</item>
 <!--        <item name="colorSurface">@color/splash</item>-->
 <!--        <item name="colorOnSurface">@color/splash</item>-->
