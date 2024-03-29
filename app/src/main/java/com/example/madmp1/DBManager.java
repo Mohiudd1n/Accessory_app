@@ -40,6 +40,22 @@ public class DBManager extends SQLiteOpenHelper {
         db.close();
     }
 
+    public boolean check_item(String desc, String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from cartdetails where description = ? and useremail = ?", new String[]{desc,email});
+        if(cursor.getCount()>0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public void remove_product(String desc){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("cartdetails","description=?",new String[]{desc});
+    }
+
     public String get_email(){
         String state = "active";
         SQLiteDatabase db = this.getReadableDatabase();

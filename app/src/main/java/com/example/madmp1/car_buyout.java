@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class car_buyout extends AppCompatActivity {
     int _quantity;
+    String desc;
     EditText q;
     DBManager dbManager = new DBManager(this);
     @Override
@@ -23,7 +24,7 @@ public class car_buyout extends AppCompatActivity {
         setContentView(R.layout.activity_car_buyout);
 
         q = findViewById(R.id.quantity_amnt);
-        String desc = getIntent().getStringExtra("desc");
+        desc = getIntent().getStringExtra("desc");
         String rate = getIntent().getStringExtra("rate");
         String oprice = getIntent().getStringExtra("oprice");
         String price = getIntent().getStringExtra("price");
@@ -50,11 +51,14 @@ public class car_buyout extends AppCompatActivity {
         buyit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String emal = dbManager.get_email();
+                String des = desc;
                 if(quantity.getText().toString().equals("")){
                     quantity.setError("Please enter quantity");
                     //                    Toast.makeText(getApplicationContext(), "Please Enter Valid Quantity!", Toast.LENGTH_LONG).show();
-                }else{
+                } else if (dbManager.check_item(des,emal)) {
+                    quantity.setError("Product Already In Cart. Please Edit Details in Cart");
+                } else{
 
                 String email = dbManager.get_email();
 //                Toast.makeText(getApplicationContext(), MainActivity.userEmail, Toast.LENGTH_LONG).show();

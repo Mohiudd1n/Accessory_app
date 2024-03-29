@@ -109,8 +109,11 @@ public class frag3 extends Fragment {
         builder.setNegativeButton("Remove Item", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                // Handle remove item action
-                // You can add your logic here
+                db.remove_product(desc.get(pos));
+                adp.clear();
+                adp2.clear();
+                adp3.clear();
+                initialize();
             }
         });
 
