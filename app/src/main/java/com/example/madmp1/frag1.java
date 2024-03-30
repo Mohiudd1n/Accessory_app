@@ -57,11 +57,11 @@ public class frag1 extends Fragment {
         ImageSlider imageSlider = view.findViewById(R.id.imageslider);
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 
-        slideModels.add(new SlideModel(R.drawable.offer1, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.offer2, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.offer3, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.offer4, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.offer5, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.off1, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.off2, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.off3, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.off4, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.off6, ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
 

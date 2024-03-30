@@ -99,16 +99,17 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="170dp">
+                android:layout_height="230dp">
 
                 <com.denzcoskun.imageslider.ImageSlider
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     app:iss_period="1000"
                     app:iss_delay="1000"
+                    android:layout_margin="15dp"
                     android:id="@+id/imageslider"
                     app:iss_auto_cycle="true"
-                    app:iss_corner_radius="20"
+                    app:iss_corner_radius="30"
                     app:iss_title_background="@drawable/gradient"/>
             </RelativeLayout>
 

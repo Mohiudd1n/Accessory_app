@@ -41,7 +41,6 @@
         android:layout_below="@+id/pf"
         android:id="@+id/pfp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/round_layout1"
         android:src="@drawable/pfpp"
     />
 
