@@ -15,7 +15,6 @@ import java.util.ArrayList;
 
 public class car_accessories extends AppCompatActivity implements RecyclerViewClick {
 
-
     ArrayList<CarAccModels> carAccModels = new ArrayList<>();
     int[] car_acc_images = {R.drawable.car_holder,R.drawable.item_2,R.drawable.item_3,R.drawable.item_4,R.drawable.item_5,
     R.drawable.item_6,R.drawable.item_7,R.drawable.car_item12,R.drawable.car_item9,R.drawable.car_item10
@@ -36,15 +35,6 @@ public class car_accessories extends AppCompatActivity implements RecyclerViewCl
         recyclerView.setAdapter(adp);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-//        ImageView btn = (ImageView) findViewById(R.id.btn1);
-//
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                finish();
-//            }
-//        });
 
     }
     private void setCarAccModels(){

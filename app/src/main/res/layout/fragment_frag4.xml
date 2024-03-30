@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"
+        android:fontFamily="@font/josefinsans_med"
         android:id="@+id/pf"
         android:textColor="@color/white"
         android:layout_margin="40dp"
@@ -25,13 +26,13 @@
         android:layout_height="290dp"
         android:layout_below="@+id/pf"
         android:layout_marginTop="45dp"
-        android:background="@drawable/round_profile" />
+        android:background="@drawable/oval_shape" />
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="380dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:background="@color/white" />
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -45,10 +46,13 @@
     />
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/pf"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationX="-30dp"
+        android:translationY="-10dp"
+        android:layout_toRightOf="@+id/pfp"
+        android:layout_alignBottom="@+id/pfp"
+        android:src="@drawable/baseline_add_a_photo_24"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -74,18 +78,20 @@
         android:layout_marginTop="40dp"
         app:cardCornerRadius="600dp"
         android:id="@+id/cardview"
-        android:background="@color/temp2"
+        android:background="@color/temp"
         android:layout_below="@+id/emails">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:background="@color/temp2"
+            android:background="@color/tem"
             android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
-            android:text="         Your Orders"
+            android:text="         Your Orders                                              "
             android:layout_margin="10dp"
             android:id="@+id/my_orders_button"
+            android:fontFamily="@font/josefinsans_med"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_height="wrap_content"/>
@@ -104,14 +110,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:background="@color/temp2"
+            android:background="@color/tem"
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
-                android:text="         Log out"
+                android:text="         Log out                                                   "
                 android:layout_margin="10dp"
                 android:id="@+id/logout"
+                android:fontFamily="@font/josefinsans_med"
                 android:textSize="18dp"
+                android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
                 android:textStyle="bold"
                 android:layout_height="wrap_content"/>
         </LinearLayout>

@@ -38,6 +38,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
+                        android:fontFamily="@font/josefinsans_med"
                         android:text="WELCOME TO BLITZR"
                         android:textColor="@color/white"
                         android:textSize="20sp"></TextView>
@@ -49,6 +50,7 @@
                         android:layout_below="@id/txt1"
                         android:text="Hi, "
                         android:textColor="@color/white"
+                        android:fontFamily="@font/josefinsans_med"
                         android:textSize="17sp"
                         android:textStyle="bold"/>
 
@@ -70,8 +72,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_marginTop="3dp"
-                        android:src="@drawable/pfpp"/>
-
+                        android:src="@drawable/icn1"/>
 
                 </RelativeLayout>
 

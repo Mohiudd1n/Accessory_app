@@ -6,20 +6,29 @@
     tools:context=".frag3">
 
     <!-- TODO: Update blank fragment layout -->
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_layout1"
+        android:background="@drawable/top_background"
+        android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CART PAGE"
+        android:text="My Cart"
         android:textSize="30sp"
+        android:textColor="@color/black"
         android:id="@+id/heading"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/josefinsans_med"
+        android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="5"
-        android:layout_below="@+id/heading"
+        android:layout_below="@+id/linear_layout1"
         android:orientation="horizontal"
         android:id="@+id/linear_layout">
         <ListView
@@ -44,11 +53,15 @@
             android:layout_weight="2"
             />
     </LinearLayout>
-    <Button
+
+    <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Place Order"
         android:id="@+id/orders"
+        android:background="@drawable/btn_bg"
+       android:theme="@style/Theme.Madmp1"
+        android:backgroundTint="@color/splash"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         />
