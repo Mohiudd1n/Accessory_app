@@ -15,6 +15,7 @@
         <item>MRP: ₹129</item>
         <item>MRP: ₹299</item>
         <item>MRP: ₹1079</item>
+        <item>MRP: ₹1,744</item>
 
     </string-array>
 
@@ -30,6 +31,7 @@
         <item>₹199</item>
         <item>₹479</item>
         <item>₹1989</item>
+        <item>₹3,500</item>
 
     </string-array>
 
@@ -45,6 +47,7 @@
         <item>3 ★</item>
         <item>4.1 ★</item>
         <item>4.8 ★</item>
+        <item>4 ★</item>
 
     </string-array>
 
@@ -61,12 +64,24 @@
         <item>Sounce High Gloss Anti Scratch Black Carbon Fiber Paint Protection Film Tape for Car Seal Anti-Dust Waterproof Strip Door Edge Cover Guard Step Cover Tape for Protection and Decoration (Black)</item>
         <item>ELV Car Mount Adjustable Car Phone Holder Universal Long Arm, Windshield for Smartphones - Black</item>
         <item>Auto Apex 100% Waterproof Triple Coated Military Color Car Body Cover for Tata Nexon (All Models) Including Mirror and Antenna Pockets.(with 2 Month Warranty)</item>
+        <item>Frido Ultimate Car Neck Rest Pillow, Ultrasoft Car Pillow for Comfortable Car Rides, Superior Neck Support Cushion, Relieves Neck Pain, Hi-Per Foam Head Rest Pillow with Washable Velvet Cover, Grey</item>
 
     </string-array>
 
-    <string name="username">Hassaan Shaikh</string>
-    <string name="bio">18 year old game developer and 3D artist</string>
-    <string name="location">Mumbai</string>
-    <string name="dob">17/06/2005</string>
-    <string name="occupation">Game Dev</string>
+    <string-array name="gym_accessory_description">
+
+    </string-array>
+
+    <string-array name="gym_accessory_rating">
+
+    </string-array>
+
+    <string-array name="gym_accessory_old_price">
+
+    </string-array>
+
+    <string-array name="gym_accessory_price">
+
+    </string-array>
+
 </resources>
