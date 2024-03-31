@@ -39,15 +39,15 @@
 
         <item>4.7 ★</item>
         <item>4.1 ★</item>
-        <item>4 ★</item>
+        <item>4.3 ★</item>
         <item>4.5 ★</item>
         <item>3.9 ★</item>
-        <item>3 ★</item>
         <item>3.9 ★</item>
-        <item>3 ★</item>
+        <item>3.9 ★</item>
+        <item>3.8 ★</item>
         <item>4.1 ★</item>
         <item>4.8 ★</item>
-        <item>4 ★</item>
+        <item>4.0 ★</item>
 
     </string-array>
 
@@ -70,17 +70,175 @@
 
     <string-array name="gym_accessory_description">
 
+    <item>Boldfit Adjustable Hand Grip Strengthener, Hand Gripper With Counter for Men and Women for Gym Workout Hand Exercise Equipment to Use in Home for Forearm Exercise, Finger Exercise Power Gripper - 60kg</item>
+    <item>Nodens Rubber Coated Professional Exercise Hex Dumbbells (Pack of 2) (12.5 Kg x 2pc (Total = 25 kg), Hex Dumbell)</item>
+    <item>XTRIM Gym Gloves for Men and Women, Gloves for Professional Weightlifting, Fitness Training and Workout (L (Fits 8-8.5 inches), Blue-Black)</item>
+    <item>NIVIA Beast Gym Bag-4 Polyester/Unisex Gym Bags/Shoulder Bag for Men and Women with Separate Shoes Compartment/Carry Gym Accessories/Fitness Bag/Sports and Travel Bag/Sports Kit (Black)</item>
+    <item>Boldfit Gym Belt for Men Workout Lever Deadlift Belt for Gym Leather Weight lifting Belts, Gym Belt for Women Workout, Powerlifting Belt for Men Exercise Belt, Gym Lifting Belt for Back</item>
+    <item>Hykes Knee cap Compression Support for Gym Running Cycling Sports Jogging Workout Pain Relief (Material: Nylon and Spandex, Color:Green, Size:Small)</item>
+    <item>Unbeatable Polyester Spandex Mens Sports Running Set Compression Shirt + Pants Skin-Tight Long Sleeves Quick Dry Fitness Tracksuit Gym Yoga Suits</item>
+    <item>VENIZIO Skipping Rope Men and women and Children Exercise Rope for Exercise Workout and Weight LossTangle Free Jumping Rope for Kids Polyvinyl Chloride rope (Multicolor)</item>
+    <item>Boldfit Pull Up Bars For Home Workout -Chin Up Bar Gym Accessories for Men Door Way Adjustable Hanging Rod Without Screw, Anti-skid Grip, Strength Training Exercise Bar- Pullup Bar Red Black</item>
+    <item>ODDISH; way to fitness Standrd/Large And Wide Range/Dual Spring Tummy Trimmer/Do Full Exercise any Time any Where fon Abdominal And Waist Trimmer for man and Women (STANDRD RED AND BLACK)</item>
+
     </string-array>
 
     <string-array name="gym_accessory_rating">
 
-    </string-array>
+    <item>4.0 ★</item>
+    <item>4.5 ★</item>
+    <item>4.2 ★</item>
+    <item>4.2 ★</item>
+    <item>4.9 ★</item>
+    <item>4.2 ★</item>
+    <item>3.7 ★</item>
+    <item>4.3 ★</item>
+    <item>4.2 ★</item>
+    <item>4.0 ★</item>
+     </string-array>
 
     <string-array name="gym_accessory_old_price">
 
+    <item>₹699</item>
+    <item>₹4,299</item>
+    <item>₹888</item>
+    <item>₹799</item>
+    <item>₹2599</item>
+    <item>₹1499</item>
+    <item>₹999</item>
+    <item>₹999</item>
+    <item>₹2999</item>
+    <item>₹999</item>
+
+    </string-array>
+    <string-array name="gym_accessory_price">
+
+    <item>₹379</item>
+    <item>₹3,499</item>
+    <item>₹379</item>
+    <item>₹499</item>
+    <item>₹999</item>
+    <item>₹729</item>
+    <item>₹599</item>
+    <item>₹399</item>
+    <item>₹1499</item>
+    <item>₹379</item>
+
     </string-array>
 
-    <string-array name="gym_accessory_price">
+    <string-array name="sports_accessory_description">
+
+        <item>India Cricket Cap Original Quality Head Caps for Men Unisex Mens Cap Adjustable Buckle Caps Men Women for All Sports Cricket Cap </item>
+        <item>new balance Men Standard Width 4020 White Cricket Shoes CK4020R5D (New)</item>
+        <item>DSC Defender Cricket Helmet for Men and Boys (Adjustable Steel Grill | Back Support Strap | Light Weight</item>
+        <item>DSC Krunch Club Kit Bag Durable and Classy Built from High Quality Materials to combine durability with a superior level of Perfection.</item>
+        <item>Mens Combo of Football Leather Gym Bag and Red Spider Shaker Fitness Kit Accessories (Red) Gym kit for Men and Women </item>
+        <item>Puma Mens Attacanto ItFootball Shoe</item>
+        <item>Nivia Football, Air Strike Foamed PVC Football, 32 Panel, Foamed PVC Stitched, Grassy Groud Hobby Playing Red,Football for Men and Women (Size -5) Color- Orange and Black</item>
+        <item>Jager-Smith Glaze Military Green (Two Compartment) I Soft Padded Straps | Spill Proof | Durable Badminton Sports Bag</item>
+        <item>JUSBALL - Ronaldo New Away Navy Football Jersey 2023-2024 Football (Kids and Mens)(13-14)</item>
+        <item>LALAJI SPORTS Wooden Carrom Board With All Accessories (Full Size 36 * 36/3 Inch Border)</item>
+
+    </string-array>
+
+    <string-array name="sports_accessory_rating">
+
+        <item>4.0 ★</item>
+        <item>3.8 ★</item>
+        <item>4.1 ★</item>
+        <item>4.0 ★</item>
+        <item>4.3 ★</item>
+        <item>4.0 ★</item>
+        <item>3.8 ★</item>
+        <item>4.8 ★</item>
+        <item>4.0 ★</item>
+        <item>4.0 ★</item>
+    </string-array>
+
+    <string-array name="sports_accessory_old_price">
+
+        <item>₹1299</item>
+        <item>₹5999</item>
+        <item>₹1799</item>
+        <item>₹2499</item>
+        <item>₹1000</item>
+        <item>₹4599</item>
+        <item>₹1299</item>
+        <item>₹1399</item>
+        <item>₹999</item>
+        <item>₹2999</item>
+
+    </string-array>
+    <string-array name="sports_accessory_price">
+
+        <item>₹599</item>
+        <item>₹4999</item>
+        <item>₹1700 </item>
+        <item>₹1500</item>
+        <item>₹600</item>
+        <item>₹3500</item>
+        <item>₹999</item>
+        <item>₹1099</item>
+        <item>₹499</item>
+        <item>₹2099</item>
+
+    </string-array>
+
+    <string-array name="college_accessory_description">
+
+        <item>FUR JADEN Anti Theft Number Lock Backpack Bag with 15.6 Inch Laptop Compartment, USB Charging Port and Organizer Pocket for Men Women Boys Girls</item>
+        <item>FINEMOE Large Capacity Pencil Box for Girls and Boys, 3 Compartments Pen and Pencil Pouches, Aesthetic Stationery Pouch for School Kids College Students, Cute Stationary Gift for Children (Black)</item>
+        <item>FLAIR Glass 0.6mm Gel Pen Stand | Transparent Glass Design With Soft Rubber Grip | Waterproof Low-Viscosity Ink For Smudge Free Writing | Blue, Black and Red Ink, Pack of 50 Pens</item>
+        <item>Crewtone 20312 Esthetic Sculpture Design Fountain Pen Extra Fine Nib,Luxury Metal Ink Pen,Include Ink Converter and Luxury Gift Box,Pen For Men and Women.,Black</item>
+        <item>dd Gel Handy WhiteBoard Marker Pen Red 10 Pen</item>
+        <item>Maped Metal Open Compass - 9 Pcs Set - (Colors May Vary) | Geometry Box | Geometry Set | Instrument Box | Die - Casted Compass <Box></Box></item>
+        <item>Worison linograph Roll N Draw Ruler 30 CM, Plastic Drafting Scale Ruler for Architect, Engineering Students, Office Employee (Set of 3 Pc)</item>
+        <item>Pentagon Engineering Instruments - Set of 7 (Mini Drafter, Sheet Container, Scale, Set Square, Pro Circle, Drawing Board Clips, 3 in 1 Drawing Compass) ED MD Engineering Drawing Instrument</item>
+        <item>Vishal Drawing Sheet Holder/Sheet Container/Drafting Tube/Roll Pack – for Engineering Student, Artist, Architect - for Artworks, Blueprints, Posters and Scrolls</item>
+        <item>A5 Lined Journal Notebook - 365 Page Leather Journals for Writing Women and Men，Hardcover Notebook with 100Gsm Thick Pages，Daily Diary for Travel, Work，School，Note Taking，College Ruled (5.9" x 8.5")</item>
+
+    </string-array>
+
+    <string-array name="college_accessory_rating">
+
+        <item>4.2 ★</item>
+        <item>3.7 ★</item>
+        <item>4.0 ★</item>
+        <item>4.4 ★</item>
+        <item>3.5 ★</item>
+        <item>4.2 ★</item>
+        <item>3.0 ★</item>
+        <item>4.6 ★</item>
+        <item>4.0 ★</item>
+        <item>4.7 ★</item>
+    </string-array>
+
+    <string-array name="college_accessory_old_price">
+
+        <item>₹2000</item>
+        <item>₹1499</item>
+        <item>₹899</item>
+        <item>₹1499</item>
+        <item>₹599</item>
+        <item>₹700</item>
+        <item>₹699</item>
+        <item>₹1599</item>
+        <item>₹890</item>
+        <item>₹1299</item>
+
+    </string-array>
+    <string-array name="college_accessory_price">
+
+        <item>₹1299</item>
+        <item>₹999</item>
+        <item>₹599</item>
+        <item>₹1099</item>
+        <item>₹299</item>
+        <item>₹399</item>
+        <item>₹499</item>
+        <item>₹1299</item>
+        <item>₹500</item>
+        <item>₹799</item>
 
     </string-array>
 
