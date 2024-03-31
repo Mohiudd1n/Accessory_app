@@ -23,7 +23,7 @@ public class car_accessories extends AppCompatActivity implements RecyclerViewCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.statusBarColor));
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.temp2));
         setContentView(R.layout.activity_car_accessories);
 
         RecyclerView recyclerView = findViewById(R.id.myrecyclerview);
